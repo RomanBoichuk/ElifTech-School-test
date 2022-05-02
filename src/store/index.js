@@ -25,7 +25,7 @@ export default new Vuex.Store({
         payments = Math.floor((payload.Initial_loan * (state.bank[0].interest_rate / 12) *
                     Math.pow(rate1, state.bank[0].loan_term)) / (Math.pow(rate1, state.bank[0].loan_term) - 1))
       } else {
-        payments = 'Перевірте коректність введених даних'
+        payments = 'Перевірте коректність введених даних.Щось невірно'
       }
       state.payment.push(payments)
     },
